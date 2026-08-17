@@ -16,6 +16,12 @@ export default defineConfig({
       }
     }
   },
+  define: {
+    // Hardcode Railway URL as fallback if env var not set
+    'import.meta.env.VITE_API_URL': JSON.stringify(
+      process.env.VITE_API_URL || 'https://web-production-539f9.up.railway.app'
+    )
+  },
   build: {
     outDir: 'dist',
     rollupOptions: {

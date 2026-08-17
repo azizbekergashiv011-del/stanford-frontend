@@ -116,15 +116,24 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Google Maps placeholder */}
-          <div style={{ marginTop: '4rem', borderRadius: 'var(--radius)', overflow: 'hidden', border: '1.5px solid var(--gray-200)', height: '350px', background: 'var(--gray-100)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <div style={{ textAlign: 'center', color: 'var(--gray-500)' }}>
-              <MapPin size={48} style={{ margin: '0 auto 1rem' }} />
-              <p style={{ fontWeight: 600 }}>Namangan viloyati, Chortoq tumani</p>
-              <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline" style={{ marginTop: '0.75rem' }}>
-                {lang === 'uz' ? "Google Maps'da ochish" : lang === 'ru' ? 'Открыть в Google Maps' : 'Open in Google Maps'}
-              </a>
-            </div>
+          {/* Google Maps embed */}
+          <div style={{ marginTop: '4rem', borderRadius: 'var(--radius)', overflow: 'hidden', border: '1.5px solid var(--gray-200)', height: '380px' }}>
+            <iframe
+              title="Stanford Training Center Location"
+              src="https://www.google.com/maps?q=41.07810814624433,71.81029070736608&z=16&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0, display: 'block' }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+          <div style={{ marginTop: '0.75rem', textAlign: 'center' }}>
+            <a href="https://www.google.com/maps?q=41.07810814624433,71.81029070736608" target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline">
+              <MapPin size={14} />
+              {lang === 'uz' ? "Google Maps'da ochish" : lang === 'ru' ? 'Открыть в Google Maps' : 'Open in Google Maps'}
+            </a>
           </div>
         </div>
       </section>
